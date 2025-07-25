@@ -15,7 +15,7 @@ services:
   user:
     image: bhargav9968/user:v1
     container_name: user
-    dependa_on:
+    depends_on:
     - redis
     - mongodb
   cart:
