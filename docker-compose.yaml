@@ -58,3 +58,13 @@ services:
     - user
     - rabbitmq  
 
+  frontend:
+    image: bhargav9968/frontend:v1
+    container_name: frontend
+    depends_on:
+    - cart
+    - user
+    - catalogue
+    - shipping
+    - payment  
+
