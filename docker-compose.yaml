@@ -41,7 +41,7 @@ services:
     container_name: rabbitmq
     environment:
     - RABBITMQ_DEFAULT_USER: roboshop
-    - RABBITMQ_DEFAULT_PASSWORD: roboshop123
+    - RABBITMQ_DEFAULT_PASS: roboshop123
   payment:
     image: bhargav9968/payment:v1
     container_name: payment  
@@ -53,4 +53,8 @@ services:
       - AMQP_HOST: rabbitmq
       - AMQP_USER: roboshop
       - AMQP_PASS: roboshop123  
+    depends_on:
+    - cart
+    - user
+    - rabbitmq  
 
