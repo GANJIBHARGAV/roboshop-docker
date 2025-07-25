@@ -6,12 +6,15 @@ networks:
 services:
   mongodb:
     image: bhargav9968/mongodb:v1
-    container_name: mongodb
+    container_name: mongodb  
   catalogue:
     image: bhargav9968/catalogue:v1
     container_name: catalogue
     depends_on: 
     - mongodb 
+  redis:
+    image: redis:7.0
+    container_name: redis  
   user:
     image: bhargav9968/user:v1
     container_name: user
