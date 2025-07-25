@@ -61,6 +61,8 @@ services:
   frontend:
     image: bhargav9968/frontend:v1
     container_name: frontend
+    ports:
+    - "80:80"
     depends_on:
     - cart
     - user
