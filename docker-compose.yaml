@@ -4,10 +4,10 @@ networks:
     name: roboshop
     #external: true
 volumes:
-- mongodb:
-- redis:
-- mysql:
-- rabbitmq: # These all are equivalent to docker volume create    
+  mongodb:
+  redis:
+  mysql:
+  rabbitmq: # These all are equivalent to docker volume create    
 services:
   mongodb:
     image: bhargav9968/mongodb:v1
@@ -19,6 +19,8 @@ services:
     container_name: catalogue
     depends_on: 
     - mongodb 
+
+
   redis:
     image: redis:7.0
     container_name: redis  
